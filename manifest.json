@@ -68,6 +68,7 @@
     "uniStatistics" : {
         "enable" : false
     },
+<<<<<<< HEAD
     "vueVersion" : "2",
     "h5" : {
         "sdkConfigs" : {
@@ -78,4 +79,7 @@
             }
         }
     }
+=======
+    "vueVersion" : "2"
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 }

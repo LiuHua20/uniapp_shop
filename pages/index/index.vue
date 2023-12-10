@@ -7,11 +7,19 @@
 		</swiper>
 		<!-- 导航区域 -->
 		<view class="nav">
+<<<<<<< HEAD
 			<view class="nav_item" v-for="(item, index) in navs" :key="index" @click="navItemClick(item.path)">
 				<view :class="item.icon"></view>
 				<text>{{item.title}}</text>
 			</view>
 <!-- 			<view class="nav_item">
+=======
+			<view class="nav_item">
+				<view class="iconfont icon-ziyuan"></view>
+				<text>黑马超市</text>
+			</view>
+			<view class="nav_item">
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 				<view class="iconfont icon-guanyuwomen"></view>
 				<text>联系我们</text>
 			</view>
@@ -22,18 +30,39 @@
 			<view class="nav_item">
 				<view class="iconfont icon-shipin"></view>
 				<text>学习视频</text>
+<<<<<<< HEAD
 			</view> -->
+=======
+			</view>
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 		</view>
 		
 		<!-- 推荐商品 -->
 		<view class="hot_goods">
 		  <view class="tit">推荐商品</view>
+<<<<<<< HEAD
 		  <goods-list :goods="goods"></goods-list>
+=======
+		  <view class="goods_list">
+			<view class="goods_item" v-for="(item, index) in goods" :key="item.id">
+			  <!-- 确保每个商品显示一个图片，并且按顺序 -->
+			  <image :src="imageUrls[index % imageUrls.length]" mode=""></image>
+			  <view class="price">
+				<text>￥{{item.sell_price}}</text>
+				<text>￥{{item.market_price}}</text>
+			  </view>
+			  <view class="name">
+				{{ item.title }}
+			  </view>
+			</view>
+		  </view>
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 		</view>
 	</view>
 </template>
 
 <script>
+<<<<<<< HEAD
 	import goodsList from '../../components/goods-list/goods-list.vue'
 	
 	export default {
@@ -63,13 +92,35 @@
 						path: '/pages/videos/videos'
 					}
 				],
+=======
+	export default {
+		data() {
+			return {
+				imageUrls: [
+				      'https://www.liuhua.wiki/wp-content/uploads/2023/12/1.png',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/2.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/3.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/4-scaled.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/5.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/6.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/atri.png',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/BA.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/fenmao-scaled.jpg',
+					  'https://www.liuhua.wiki/wp-content/uploads/2023/12/preview.jpg'
+				    ],
+				swipers: [],
+				goods: []
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 			}
 		},
 		onLoad() {
 			this.getSwipers()
 			this.gethotGoods()
 		},
+<<<<<<< HEAD
 		components: {"goods-list": goodsList},
+=======
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 		methods: {
 			// 获取轮播图
 			async getSwipers(){
@@ -86,6 +137,7 @@
 					url: '/api/getgoods?pageindex=1'
 				})
 				this.goods = res.data.message
+<<<<<<< HEAD
 			},
 			// 导航点击的处理函数
 			navItemClick(url){
@@ -93,6 +145,8 @@
 				uni.navigateTo({
 					url
 				})
+=======
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 			}
 		}
 	}
@@ -145,6 +199,47 @@
 				background: #fff;
 				margin: 7rpx 0;
 			}
+<<<<<<< HEAD
+=======
+		
+			.goods_list{
+				padding: 0 15rpx;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				.goods_item{
+					background-color: #fff;
+					width: 355rpx;
+					margin: 10rpx 0;
+					padding: 15rpx;
+					box-sizing: border-box;
+					image{
+						width: 80%;
+						height: 150rpx;
+						display: block;
+						margin: auto;
+					}
+					
+					.price{
+						color: $shop-color;
+						font-size: 36rpx;
+						text:nth-child(2){
+							color: #ccc;
+							font-size: 28rpx;
+							margin-left: 17rpx;
+							text-decoration: line-through;
+						}
+					}
+					
+					.name{
+						font-size: 28rpx;
+						line-height: 50rpx;
+						padding-bottom: 15rpx;
+						padding-top: 10rpx;
+					}
+				}
+			}
+>>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
 		}
 	}
 </style>
