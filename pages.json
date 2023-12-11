@@ -30,7 +30,6 @@
             }
             
         }
-<<<<<<< HEAD
         ,{
             "path" : "pages/goods/goods",
             "style" :                                                                                    
@@ -49,8 +48,6 @@
             }
             
         }
-=======
->>>>>>> 9b69d4bdc21c684f425b4a30ae1933e6b2f3999e
     ],
 	"tabBar":{
 		"list":[
